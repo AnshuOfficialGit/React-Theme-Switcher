@@ -2,26 +2,27 @@ import { useTheme } from "../../context/ThemeContext";
 import Sidebar from "../master/sidebar";
 import Card from "../common/card";
 import { Sparkles, Blocks, Codesandbox } from "lucide-react";
-import ProductService from "../../services/products/product-service";
+import {ProductService, type Product } from "../../services/products/product-service";
 import { useEffect, useState } from "react";
+
 
 const Layout = () => {
   const { theme } = useTheme();
-  const [products, setProducts] = useState([]);
+const [products, setProducts] = useState<Product[]>([]);
   const [activePage, setActivePage] = useState("Dashboard");
 
-  const fetchProduct = async () => {
-    try {
-      const response = await ProductService.products();
-      setProducts(response?.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+const fetchProduct = async () => {
+  try {
+    const data = await ProductService();
+    setProducts(data);
+  } catch (error) {
+    console.error("Error fetching products:", error);
+  }
+};
 
-  useEffect(() => {
-    fetchProduct();
-  }, []);
+useEffect(() => {
+  fetchProduct();
+}, []);
 
   const sharedContent = (
     <>
