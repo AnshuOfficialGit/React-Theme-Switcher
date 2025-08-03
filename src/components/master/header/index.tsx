@@ -13,7 +13,7 @@ const Header = () => {
     >
       <h1 className="flex items-center gap-2 text-xl font-bold">
         <Codesandbox className="h-8 w-8 text-primary" />
-        Theme Switcher
+        Logo
       </h1>
       <select
         value={theme}
