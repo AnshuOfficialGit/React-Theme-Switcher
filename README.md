@@ -19,58 +19,59 @@ A React + TypeScript web application that supports three distinct visual themes.
 - **Built with TypeScript** for type safety and maintainability
 
 ## 📁 Project Structure
-
+<details> <summary>Click to expand</summary>
+plaintext
+Copy
+Edit
 REACT-THEME-SWITCHER/
 ├── node_modules/                        # Installed dependencies
 ├── public/
 │   └── index.html                       # HTML entry point
-│
+
 ├── src/
 │   ├── assets/
 │   │   └── react.svg                    # Static assets (e.g., logo)
-│
+
 │   ├── components/
 │   │   ├── common/
 │   │   │   └── card/
 │   │   │       └── index.tsx            # Reusable card component (used in grid view)
-│   │   │
 │   │   ├── layouts/
 │   │   │   └── index.tsx                # Global layout wrapper
-│   │   │
 │   │   └── master/
 │   │       ├── footer/
 │   │       │   └── index.tsx            # Footer section
 │   │       ├── header/
 │   │       │   └── index.tsx            # Header with theme dropdown
 │   │       └── sidebar/
-│   │           └── index.tsx            # Sidebar which is used in theme 2
-│
+│   │           └── index.tsx            # Sidebar used in Theme 2
+
 │   ├── context/
-│   │   └── ThemeContext.tsx             # Theme Context for switching and persisting theme with localStorage 
-│
+│   │   └── ThemeContext.tsx             # Theme Context API with localStorage
+
 │   ├── services/
 │   │   └── products/
-│   │       └── product-service.tsx      # Service to fetch products from fakestoreapi.com 
-│
-│   ├── App.tsx                          # Main app component with routing
-│   ├── App.css                          # App-specific styles (if used alongside Tailwind)
-│   ├── index.css                        # Entry styles and Tailwind directives
-│   ├── main.tsx                         # Root renderer and provider wrapper
-│   ├── vite-env.d.ts                    # TypeScript Vite support file
-│
-├── .gitignore                           # Git ignored files
-├── eslint.config.js                     # ESLint configuration
-├── index.html                           # HTML base template
-├── package.json                         # NPM dependencies and scripts
-├── package-lock.json                    # Dependency lock file
-├── postcss.config.js                    # PostCSS setup (for Tailwind)
-├── tailwind.config.js                   # Tailwind theme customization
-├── tsconfig.app.json                    # App-specific TypeScript config
-├── tsconfig.json                        # Root TypeScript configuration
-├── tsconfig.node.json                   # Node typescript config (used by Vite)
-├── vite.config.ts                       # Vite configuration
-├── README.md                            # Project documentation 
+│   │       └── product-service.tsx      # Fetches products from fakestoreapi.com
 
+│   ├── App.tsx                          # Main app component with routing
+│   ├── App.css                          # App-specific styles
+│   ├── index.css                        # Entry styles (Tailwind directives)
+│   ├── main.tsx                         # App bootstrap
+│   ├── vite-env.d.ts                    # Vite env typings
+
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+├── postcss.config.js
+├── tailwind.config.js
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+├── vite.config.ts
+├── README.md
+</details>
 
 ## 🛠️ Installation & Setup
 
