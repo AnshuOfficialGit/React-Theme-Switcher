@@ -2,37 +2,37 @@ import { useTheme } from "../../context/ThemeContext";
 import Sidebar from "../master/sidebar";
 import Card from "../common/card";
 import { Sparkles, Blocks, Codesandbox } from "lucide-react";
-import {ProductService, type Product } from "../../services/products/product-service";
+import {
+  ProductService,
+  type Product,
+} from "../../services/products/product-service";
 import { useEffect, useState } from "react";
-
 
 const Layout = () => {
   const { theme } = useTheme();
-const [products, setProducts] = useState<Product[]>([]);
+  const [products, setProducts] = useState<Product[]>([]);
   const [activePage, setActivePage] = useState("Dashboard");
 
-const fetchProduct = async () => {
-  try {
-    const data = await ProductService();
-    setProducts(data);
-  } catch (error) {
-    console.error("Error fetching products:", error);
-  }
-};
+  const fetchProduct = async () => {
+    try {
+      const data = await ProductService();
+      setProducts(data);
+    } catch (error) {
+      console.error("Error fetching products:", error);
+    }
+  };
 
-useEffect(() => {
-  fetchProduct();
-}, []);
+  useEffect(() => {
+    fetchProduct();
+  }, []);
 
   const sharedContent = (
     <>
       <h1>
         <Codesandbox className="inline-block mr-2 h-8 w-8 text-primary" />
       </h1>
-      <h2 className="text-3xl font-bold">Clean. Simple. Elegant.</h2>
-      <h3 className="text-3xl font">
-        Experience minimalist design at its finest
-      </h3>
+      <h2 className="text-2xl font-bold">Clean Aesthetic</h2>
+      <h3 className="text-xl">Design that speaks softly</h3>
     </>
   );
 
@@ -50,7 +50,7 @@ useEffect(() => {
                     : "bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition"
                 }`}
               >
-                <Sparkles className="inline-block mr-2" /> Explore Products
+                <Sparkles className="inline-block mr-2" /> Explore 
               </button>
               <button
                 className={`${
@@ -59,7 +59,7 @@ useEffect(() => {
                     : "bg-gray-200 text-black px-4 py-2 rounded hover:bg-gray-800 hover:text-white transition"
                 }`}
               >
-                <Blocks className="inline-block mr-2" /> Learn More
+                <Blocks className="inline-block mr-2" />  More
               </button>
             </div>
           </section>
