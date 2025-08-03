@@ -177,7 +177,7 @@ const Layout = () => {
                 : "bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition"
             }`}
           >
-            <Sparkles className="inline-block mr-2" /> Explore Products
+            <Sparkles className="inline-block mr-2" /> Explore 
           </button>
           <button
             className={`${
@@ -186,7 +186,7 @@ const Layout = () => {
                 : "bg-gray-200 text-black px-4 py-2 rounded hover:bg-gray-800 hover:text-white transition"
             }`}
           >
-            <Blocks className="inline-block mr-2" /> Learn More
+            <Blocks className="inline-block mr-2" /> More
           </button>
         </div>
 
